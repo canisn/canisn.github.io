@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  "hello world!"
-categories: SnakeSon
-tags:  Ubuntu Pycharm 
-author: SnakeSon
+categories: hello-world
+tags:  start 
+author: canisn
 ---
 
 * content
 {:toc}
 
-##2. 二级标题
+## 2. 二级标题
 这里是摘要
 ```python
 import numpy as np

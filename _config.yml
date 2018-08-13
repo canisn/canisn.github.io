@@ -7,7 +7,7 @@
 
 # Site settings
 title: canisn的技术专栏
-brief-intro: Android and Python Coder
+brief-intro: ML and Python Coder
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://643435675.github.io" # the base hostname & protocol for your site
 
@@ -52,4 +52,4 @@ excerpt_separator: "\n\n\n\n"
 # paginate
 plugins: [jekyll-paginate]
 paginate: 6
-port: 4001
+port: 4000
