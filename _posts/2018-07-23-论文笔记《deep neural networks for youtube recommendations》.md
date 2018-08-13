@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《deep&wide》论文!"
+title:  "《deep&wide》论文"
 categories: 推荐系统
 tags:  deep&wide 
 author: canisn

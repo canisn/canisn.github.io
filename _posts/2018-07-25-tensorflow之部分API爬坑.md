@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "tensorflow之部分API!"
+title:  "tensorflow之部分API"
 categories: tensorflow
 tags:  API 
 author: canisn

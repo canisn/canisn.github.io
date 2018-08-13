@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "虚拟环境搭建"
-categories: linux python
-tags:  linux python
+categories: linux
+tags: virtual python
 author: canisn
 ---
 
