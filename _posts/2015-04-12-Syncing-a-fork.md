@@ -27,7 +27,7 @@ fork 了别人的仓库后，原作者又更新了仓库，如何将自己的代
 
 ### Configuring a remote for a fork
 
-* 给 fork 配置一个 remote   
+* 给 fork 配置一个 remote  <u></u> 
 
 * 主要使用 `git remote -v` 查看远程状态。   
 
