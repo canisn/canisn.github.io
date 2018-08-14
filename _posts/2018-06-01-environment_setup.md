@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "虚拟环境搭建"
+title:  "开发环境配置"
 categories: linux
 tags: virtual python
 author: canisn
@@ -92,3 +92,39 @@ pipreqs ./
 # 把全部依赖包写入requirements文件
 pip install -r requirements
 ```
+
+## 3. 在服务器上安装**Jupyter**
+
+```shell
+pip install jupyter
+# 生成配置文件
+jupyter notebook --generate-config
+```
+
+```python
+# 在python环境下生成密码
+(py3venv) [work@sh-rec-offline03 canisn]$ python
+Python 3.6.2 (default, Mar 28 2018, 22:18:10)
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-16)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from notebook.auth import passwd
+>>> passwd()
+Enter password:
+Verify password:
+'sha1:d00ba59840c6:f42d2bbaca83f2045b4c8b0b082574cd77413f3a'
+```
+
+```shell
+# 打开配置文件
+vi /home/work/.jupyter/jupyter_notebook_config.py
+# 编辑以下内容
+c.NotebookApp.port = 8888
+c.NotebookApp.notebook_dir = "/data/canisn"
+# 允许登陆的IP，可以是IP段
+c.NotebookApp.ip='*'
+c.NotebookApp.open_browser = False
+# 刚才生成的密文
+c.NotebookApp.password = u'sha1:d00ba59840c6:f42d2bbaca83f2045b4c8b0b082574cd77413f3a'
+```
+
+之后就可以在浏览器中打开了，注意密码是明文，就是刚才生成密文时输入的。
