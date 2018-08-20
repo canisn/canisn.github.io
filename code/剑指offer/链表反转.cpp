@@ -14,40 +14,21 @@ struct ListNode {
 class Solution {
 public:
     ListNode* ReverseList(ListNode* pHead) {
-    	if(pHead == nullptr){
-    		return nullptr;
-    	}
-    	ListNode* node = pHead;
-    	ListNode* pre = nullptr;
-    	ListNode* revHead = nullptr;
-    	while(node != nullptr){
-    		ListNode* temp = node->next;
-    		if(temp == nullptr){
-    			revHead = node;
-    			break;
-    		}
-    		node->next = pre;
-    		pre = node;
-    		node = temp;
-    	}
-    	return revHead;
+        ListNode* node = pHead;
+        ListNode* pre = nullptr;
+        ListNode* revHead = nullptr;
+        
+        while(node != nullptr){
+            ListNode* temp = node->next;
+            if(temp == nullptr){
+                revHead = node;
+                // 注意这里还不能跳出，这个节点指针还没有反转
+                //break;
+            }
+            node->next = pre;
+            pre = node;
+            node = temp;
+        }
+        return revHead;
     }
 };
-
-int main(int argc, char const *argv[])
-{
-	ListNode* root = new ListNode(1);
-	ListNode* p = root;
-	for (int i = 0; i < 5; ++i)
-	{
-		ListNode* node = new ListNode(i);
-		p->next = node;
-		p = node;
-	}
-	p = root;
-	while(p){
-		cout << p->val;
-	}
-
-	return 0;
-}
