@@ -3,21 +3,21 @@
 class Solution {
 public:
     bool VerifySquenceOfBST(vector<int> sequence) {
-        if(sequence.size())
+        if (sequence.size())
             return is_BST(sequence, 0, sequence.size()-1);
         else
             return false;
     }
     bool is_BST(vector<int>& sequence, int start, int end){
-        if(start <= end){
+        if (start <= end) {
             return true;
         }
         int cur = end-1;
         // 注意这里指针可能到start-1,因此上面那句判断为空的要带<
-        while(cur >= start && sequence[cur] > sequence[end]){
+        while (cur >= start && sequence[cur] > sequence[end]){
             cur--;
         }
-        for(int i = start; i < cur; i++){
+        for (int i = start; i < cur; i++){
             if(sequence[i] > sequence[end]){
                 return false;
             }

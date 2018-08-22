@@ -101,7 +101,7 @@ pip install jupyter
 jupyter notebook --generate-config
 ```
 
-```python
+```shell
 # 在python环境下生成密码
 (py3venv) [work@sh-rec-offline03 canisn]$ python
 Python 3.6.2 (default, Mar 28 2018, 22:18:10)

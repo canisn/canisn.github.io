@@ -28,12 +28,12 @@ public:
     		vinLeft.push_back(vin[j]);
     	}
     	// 存储右子树序列
-    	for(int j = i+1; j < pre.size(); j++){
+    	for(int j=i+1; j<pre.size(); j++){
     		preRight.push_back(pre[j]);
     		vinRight.push_back(vin[j]);
     	}
     	// 递归调用
-    	if(preLeft.size()>0){
+    	if(preLeft.size() >0){
     		node->left = reConstructBinaryTree(preLeft, vinLeft);
     	}
     	if(preRight.size()>0){
