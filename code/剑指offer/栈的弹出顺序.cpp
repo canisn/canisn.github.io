@@ -16,7 +16,7 @@ public:
             }
         }
         // 这里可可以判断栈是否为空，另外就是栈为空的时候j已经超出数组范围了。不是size()-1
-        if(j == popV.size()){
+        if(j == popV.size()) {
             return true;
         }
         else{
