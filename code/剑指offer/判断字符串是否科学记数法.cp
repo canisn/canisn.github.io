@@ -25,16 +25,16 @@ public:
                 dot=1;
             }
             else if(*string=='e'||*string=='E')
-                {
-                  if(num==0||nume>0)
-                      return false;
-                  string++;
-                  nume++;
-                  if(*string=='+'||*string=='-')
-                      string++;
-                 if(*string=='\0')
-                     return false;
-                }
+            {
+              	if(num==0||nume>0)
+                  	return false;
+             	string++;
+             	nume++;
+             	if(*string=='+'||*string=='-')
+                 	string++;
+             	if(*string=='\0')
+                	return false;
+            }
             else
                 return false;
         }

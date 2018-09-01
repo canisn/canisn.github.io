@@ -14,6 +14,7 @@ public:
         	if (numbers[i] == i) {
         		continue;
         	} else if (numbers[i] == numbers[numbers[i]]) {
+        		*duplication = numbers[i];
         		return true;
         	} else {
         		swap(numbers[i], numbers[numbers[i]]);

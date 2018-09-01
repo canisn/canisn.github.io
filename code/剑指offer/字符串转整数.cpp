@@ -7,17 +7,21 @@ public:
     int StrToInt(string str) {
     	char sign;
     	int result = 0;
-        for (int i = 0; i < str.length(); ++i) {
-            if (str[i] == "+" || str[i] == "-") {
-             	sign = str[i];
-             	++i;
-            }
+    	int i = 0;
+        if (str[0] == '+' || str[0] == '-') {
+         	sign = str[i];
+         	++i;
+        }
+        for (; i < str.length(); ++i) {
             if((str[i]-'0') <= 9 && (str[i] - '0') >= 0) {
              	result = result*10 + (str[i]-'0');
             }
             else {
              	return 0;
             }
+        }
+        if(sign == '-'){
+        	result = -result;
         }
         return result;
     }
